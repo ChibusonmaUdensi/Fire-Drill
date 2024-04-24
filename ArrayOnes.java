@@ -1,26 +1,23 @@
+import java.util.Arrays; 
+
 public class ArrayOnes {
-	public static int[] Array (int[] numbers) {
-	int[] newArray ={4, 5, 8, 8, 2, 9};
- 	for(int digit: newArray) {
-		if (digit % 2 = 0) {
-			digit = 0;
+
+	public static int[] array (int[] array) {
+	int[] outcome = new int[array.length];
+	for(int i = 0; i < array.length; i++) {
+		if (outcome[i] % 2 == 0) {
+			outcome[i] = 0;
+		} else {
+			outcome[i] = 1;
 		}
-		return newArray;
-	}  
-
-	for(int num: newArray) {
-		if (num % 2 = 1) {
-			num = 1;
-		}
-		return newArray;
-	}
-
-   }
-
+	       }
+		return outcome;
+     	}
+  
 
 	public static void main(String[] args) {
-  		 int[] newArray ={4, 5, 8, 8, 2, 9};
-
-    System.out.print(newArray);
+		int[] newArray ={4, 5, 8, 8, 2, 9};
+		int[] newAray = array(newArray);
+    System.out.print(Arrays.toString(newAray));
 	}
   }

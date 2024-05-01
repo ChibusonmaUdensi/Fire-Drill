@@ -5,35 +5,41 @@ public class StudentGrade {
    public static void main(String[] args) {
 	Scanner scanner = new Scanner(System.in);
 
-
+int i = 1;
+int students = 0;
+int subjects = 0;
+int j = 1;
+int total = 0;
 
 
 System.out.println("How many students do you have?");
-
-int numOfStudents = scanner.nextInt();
-int[] scores = new int[numOfStudents];
-String [] names = new String[numOfStudents];
+students = scanner.nextInt();
 
 System.out.println("How many subjects do they offer?");
-int numOfSubjects = scanner.nextInt();
+subjects = scanner.nextInt();
+
+System.out.println();
+
+int[][] scores = new int[students][subjects];
 
 System.out.println("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 System.out.println("Saved Successfully");
 
+for ( i = 0; i < students; i++) {
+for ( j = 0; j < subjects; j++) {
 
-System.out.println("Entering score for student " + (1) + "  ");
-for (int i = 0; i <= numOfStudents; i++) {
-	scanner.nextLine();
-for (int j = 0; j <= numOfSubjects; j++) {
-	System.out.print("Enter score for subject " + (j + 1) + " : ");
-	scores[i] = scanner.nextInt();
+	System.out.printf("Entering score for student %d%n", i + 1);
+	System.out.printf("Enter score for subject %d%n", j + 1);
+	scores[i][j] = scanner.nextInt();
 	System.out.println("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    System.out.println("Saved Successfully");
-    System.out.println("Enter score for student " + (j + 1) + "  ");
-	}
+        System.out.println("Saved Successfully");
+   }
    }
 
 System.out.print("=========================================================================");
-System.out.printf("%10s%10s%10s%10s\n", "Student", "Sub1", "Sub2", Sub  "TOTAL" );
+
+// System.out.printf("STUDENT"  + "\t");
+	
+
 	}
 }
